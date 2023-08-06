@@ -1,0 +1,11 @@
+:host {    
+    --sds-c-slider-thumb-color-foreground: red;    
+    --slds-c-slider-thumb-color-foreground-active:red;
+   --slds-c-slider-thumb-color-foreground-focus:red;
+    --slds-c-slider-thumb-color-foreground-hover:red;
+    --slds-c-slider-track-color:red;
+
+}
+.track{
+    background-color: red;
+}

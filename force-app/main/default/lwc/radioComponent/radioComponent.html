@@ -1,0 +1,35 @@
+<template>
+<lightning-card title="Select Table">
+    <div class=center>
+       
+    <lightning-radio-group name="radioGroup"
+                            label="Select Table"
+                            options={options}
+                            value={value}
+                            type="radio"
+                            onchange={handleChange}
+                            required>
+                            
+    </lightning-radio-group>
+    
+</div>
+    <div>
+    <template if:true={isAccount}>
+            
+                <!--<c-account-table></c-account-table>-->
+                <c-create-account
+                onclose={closeAccComponenet}></c-create-account>
+           
+    </template>        
+            <template if:true={isContact}>
+                <!--<c-contact-table></c-contact-table>-->
+                <c-create-contact
+                onclose={closeConComponenet}></c-create-contact>
+                </template>
+            
+        
+     </div>   
+        
+   
+</lightning-card>
+</template>

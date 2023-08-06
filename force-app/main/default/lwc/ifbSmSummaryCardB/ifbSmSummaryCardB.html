@@ -1,0 +1,45 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-no-flex" style="height: 10rem;">
+            <section class="slds-clearfix slds-m-around_medium">
+                <div class="slds-grid">
+                    <div class="slds-m-top_medium">
+                        <span><b class="text">
+                                <span>Section B-Onboarding</span>
+                                                      
+                            </b>
+                        </span>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <span class="text" style="font-size:12px">Target : 80000<b></b></span>
+                    <!--<span if:true={blnHH} class="text" style="font-size:12px">Suggested target: {intSuggestedMileStone} HH-25K Eq. A/C<b></b></span>-->
+                    
+                </div>
+                <br>
+                <div>
+                    <!-- <div class="slds-col "> -->
+                        <p  class="text" style="font-size:12px">Achieved: <b>35000</b></p>
+                       <!-- <p if:true={blnHH} class="text" style="font-size:12px">Achieved: <b>{total}</b></p>-->                     
+                    <div class=" slds-grid slds-gutters">
+                    <div class=" slds-col slds-size_5-of-6">
+                        <lightning-progress-bar class="progressBar" value={intProgressBarValue}></lightning-progress-bar>
+                    </div>
+                    <div class="slds-col slds-align_absolute-center slds-size_1-of-6" style="margin-top: -6px; font-size:12px; ">
+                        {intProgressValueRoundedUp}%
+                    </div>
+                </div>
+                    <!--<p class="text slds-m-bottom_medium" style="font-size:12px">Gap:<b>{intGap}</b></p>-->
+                    <p class="text slds-m-bottom_medium" style="font-size:12px">Gap:<b>17000</b></p>
+                    <!-- </div> -->
+                </div>
+            </section>
+        </div>
+    </article>
+</template>
+<!--Points To Consider
+1.we Have to check which user has been logging in i.e SM_HH or SM_CA
+    for this we have to use if:true directive
+2. On JS side we have to consider how the values of Target,Acheived,Progressbar and gap will be calculated
+-->

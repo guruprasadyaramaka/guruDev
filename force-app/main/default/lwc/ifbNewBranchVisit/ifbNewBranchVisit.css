@@ -1,0 +1,46 @@
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.comboboxWidth{
+    width: 12rem;
+}
+.tooltip.tooltiptext{
+    visibility: hidden;
+    width: 15rem;
+    background-color: #c5c2c2;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    margin-left: -60px;
+}
+.tooltip:hover.tooltip.tooltiptext{
+    visibility: visible;
+}
+.my-container{
+    --sds-c-button-brand-color-border:white;
+
+}
+.pop-box{
+    z-index: 10;
+}
+.hoverList{
+    font-size: 10px;
+}
+.tableWidth{
+    width: 400px;
+}
+.tdHierarchyHead > td{
+    background-color: #9c1d27;
+    font-size: small;
+    font-weight: 400;
+    color: white;
+    padding: 0.5%;
+}
+.lightning-button.button{
+    --sds-c-button-brand-color-background:#rgb(255,255,255);
+    --sds-c-button-text-color:#rgb(255,255,255);
+}

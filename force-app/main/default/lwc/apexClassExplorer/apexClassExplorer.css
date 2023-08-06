@@ -1,0 +1,2 @@
+element { animation: happy-animation 2s linear; }
+element.paused { animation-play-state: paused; }

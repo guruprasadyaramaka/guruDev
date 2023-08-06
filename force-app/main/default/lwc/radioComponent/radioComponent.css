@@ -1,0 +1,21 @@
+.center {
+    margin: auto;
+    width: 50%;   
+    padding: 10px;
+  }
+
+  .classOne{
+font-weight: var(--lwc-fontWeightBold,700);
+float: left;
+color: blue;
+size: a5;
+size: landscape;
+font-size: xx-large;
+  }
+  .classTwo{
+    display: inline;
+    vertical-align: baseline;
+    
+    
+    font-size: xx-large;
+  }

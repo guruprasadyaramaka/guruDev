@@ -1,0 +1,76 @@
+<template>
+	<lightning-card>
+        <div class="slds-var-m-around_medium">
+            <img style="width:150px;height:60px;" src={yotiPhoto}>
+            
+        </div>
+		<div class="slds-var-m-around_medium">
+			<div class="slds-float_right"> {page}-{totalPage} of {totalPage} &nbsp;
+				<lightning-button-group>
+					<button>
+						<lightning-icon icon-name="utility:chevronleft" size="xx-small" onclick={previousHandler}></lightning-icon>
+					</button>
+					<button>
+						<lightning-icon icon-name="utility:chevronright" size="xx-small" onclick={nextHandler}></lightning-icon>
+					</button>
+				</lightning-button-group>
+			</div>
+			<br/>
+			<br/>
+			<div style="width:100%;" class="tableStyle">
+				<!-- <template if:true={data}>
+                <lightning-datatable
+                key-field="id"
+                data={data}
+                hide-checkbox-column
+                columns={columns}>
+                </lightning-datatable>
+            </template>   -->
+				<table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+					<thead>
+						<tr class="slds-line-height_reset">
+							<th class="" scope="col" style="width:40%">
+								<div class="slds-truncate" title="Envelope Name">Envelope Name</div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Sent to">Sent to</div>
+							</th>
+							<th class="" scope="col" style="width:13%">
+								<div class="slds-truncate" title="Signing Status">Signing Status</div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Sent on">Sent on </div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title=""></div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+                        <template for:each={data} for:item="dta" for:index="index">
+                            
+                            <tr class="slds-hint-parent" key={dta.value.Id}>
+                                <th data-label="Envelope Name" scope="row">
+                                    <div class="slds-truncate" > <a onclick={openRecord} data-index={index} tabindex="-1">{dta.value.Name}</a> </div>
+                                </th>
+                                <td data-label="Sent to">
+                                    <div class="slds-truncate" >{dta.value.SentTo__c}</div>
+                                </td>
+                                <td data-label="Signing Status" style={dta.isSignedStyle}>
+                                    <div  >{dta.value.SigningStatus__c}</div>
+                                </td>
+                                <td data-label="Sent on">
+                                    <div class="slds-truncate" >{dta.value.SentOn__c}</div>
+                                </td>
+                                <td >
+                                    <div class="slds-truncate" > <a onclick={openURL} tabindex="-1">View Details</a> </div>
+                                </td>
+                            </tr>
+                        </template>		
+					</tbody>
+				</table>
+                
+			</div>
+		</div>
+	</lightning-card>
+</template>

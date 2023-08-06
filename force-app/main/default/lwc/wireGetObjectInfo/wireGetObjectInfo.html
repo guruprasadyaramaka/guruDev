@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="WireGetObjectInfo" icon-name="custom:custom67" >
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" padding="around-small">
+                <div class="slds-m-horizontal_medium">
+                    <lightning-input value={objectApiNameInputValue} placeholder="Enter Object API Name" onchange={objectNameChange} label="Search"></lightning-input>
+                <p class="slds-p-vertical_small">
+                    <lightning-button label="Get Object Info" onclick={handleBtnClick}></lightning-button>
+                </p>
+                <template if:true={objectInfo.data}>
+                    <div class="scroller">
+                        <pre>{objectInfoStr}</pre>
+                    </div>
+                    <lightning-combobox name="fieldApiName" label="Select Field To get Info" value="" 
+                    placeholder="Select Field Api Name" options={fieldOptions} onchange={fieldNameChange}>
+                </lightning-combobox>
+                <p class="slds-p-vertical_small">
+                    <lightning-button label="Get Field Info" onclick={handleFieldBtnClick}></lightning-button>
+                </p>
+                <template if:true={fieldInformation}>
+                    <div class="scroller">
+                        <pre>{fieldInformation}</pre>
+                    </div>
+                </template>
+                </template>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" large-device-size="12" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_left">
+                    <p>Total Number of Fields:-
+                        <lightning-formatted-number value={numberOfFileds}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Custom Fields:-
+                        <lightning-formatted-number value={totalCustomField}></lightning-formatted-number>
+                    </p>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,129 @@
+<template>
+    <lightning-card>
+        <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="1" medium-device-size="1" large-device-size="12" padding="around-small">
+                <div class="slds-box">                   
+                    <div class="slds-clearfix">
+                        <div class="slds-float_left">
+                        <b>WHAT IS SIP?</b>
+                        </div>
+                         <template if:true={addButtonHidden}>
+                        <div class="slds-float_right">
+                          <lightning-button  name="section1Expand" icon-name="utility:add"  onclick={handleExpand}></lightning-button>
+                        </div>
+                        </template>                        
+                    </div>
+                     
+                    <template if:true={subtractButtonHidden}>
+                        <div class="slds-clearfix">
+                            <p>
+                                SIP stands for Systematic Investment Plan.An investnebt option that lets 
+                                you invest small amounts regularly and in a disciplined manner.
+                                All this without distrupting your monthly budget
+                            </p>                       
+                            <div class="slds-float_right">
+                            <lightning-button   name="section1minimize" icon-name="utility:subtract" label="-"  onclick={handleMinimize}></lightning-button>
+                            </div>
+                        </div>
+                    </template>                                       
+                </div>
+            </lightning-layout-item>            
+            <lightning-layout-item size="12" small-device-size="1" medium-device-size="1" large-device-size="12" padding="around-small">
+                <div class="slds-box">                   
+                    <div class="slds-clearfix">
+                        <div class="slds-float_left">
+                        <b>WHY START AN SIP?</b>
+                        </div>
+                         <template if:true={addButtonHidden}>
+                        <div class="slds-float_right">
+                          <lightning-button  name="section2Expand" icon-name="utility:add"  onclick={handleExpand}></lightning-button>
+                        </div>
+                        </template>                        
+                    </div>
+                     
+                    <template if:true={subtractButtonHidden}>
+                        <div class="slds-clearfix">
+                            <p>
+                                It is an effective method of achieving your financial goals by breaking up your big life dreams into smaller,
+                                more achievable goals
+                            </p>                       
+                            <div class="slds-float_right">
+                            <lightning-button  name="section2minimize" icon-name="utility:subtract" label="-"  onclick={handleMinimize}></lightning-button>
+                            </div>
+                        </div>
+                    </template>                                       
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="1" medium-device-size="1" large-device-size="12" padding="around-small">
+                <div class="slds-box">                   
+                    <div class="slds-clearfix">
+                        <div class="slds-float_left">
+                        <b>HOW TO START AN SIP?</b>
+                        </div>
+                         <template if:true={addButtonHidden}>
+                        <div class="slds-float_right">
+                          <lightning-button  name="section3Expand" icon-name="utility:add"  onclick={handleExpand}></lightning-button>
+                        </div>
+                        </template>                        
+                    </div>
+                     
+                    <template if:true={subtractButtonHidden}>
+                        <div class="slds-clearfix">
+                            <p>
+                                automate your savings with SIP is an simple 4-step process
+
+                            </p>                       
+                            <div class="slds-float_right">
+                            <lightning-button  name="section3minimize" icon-name="utility:subtract" label="-"  onclick={handleMinimize}></lightning-button>
+                            </div>
+                        </div>
+                    </template>                                       
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="1" medium-device-size="1" large-device-size="12" padding="around-small">
+                <div class="slds-p-around_medium slds-text-align_left"><b>How does an SIP work?</b></br>
+                <p>SIP helps automate your savings and is a smarter way to acheive your dreams</p>
+                </div>
+            </lightning-layout-item>
+            <!--<lightning-layout-item size="6" small-device-size="1" medium-device-size="1" large-device-size="6" padding="around-small">
+                <div class="slds-p-around_medium slds-text-align_center">{investValue}</div>
+            </lightning-layout-item>-->
+            <lightning-layout-item size="12" small-device-size="1" medium-device-size="1" large-device-size="12" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium">
+                   <div class="slds-text-align_left">Monthly I can Invest</div>
+                   <div class="slds-text-align_right slds-text-color_error">{investValue} </div>                                  
+                    <lightning-slider  
+                        min="500"
+                        max="100000"                        
+                        step="500"
+                        value={investValue}
+                        onchange={investHandleChange}
+                        >
+                    </lightning-slider>                    
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="1" medium-device-size="1" large-device-size="12" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium">
+                   <span><div class="slds-text-align_left">I plan invest for</div>
+                   <div class="slds-text-align_right slds-text-color_error">{investYears} Years</div></span>                
+                    <lightning-slider 
+                        min="2"
+                        max="60"                        
+                        step="1"
+                        value={investYears}
+                        onchange={investYearHandleChange}
+                        >
+                    </lightning-slider>
+                </div>
+                </br>
+                <div>
+                     <p>If you invest {investValue} every month for {investYears} years at 12% rate of return ,you may accumalate
+                         {totalReturnValue}</p> 
+                </div>
+            </lightning-layout-item>
+                     
+        </lightning-layout>
+    </div>        
+    </lightning-card>
+</template>

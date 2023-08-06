@@ -1,0 +1,25 @@
+.slds-card{
+background-color: rgb(223, 226, 226);
+border-radius: 20px;
+padding-left:10px; 
+padding-right:10px;
+padding-bottom:10px;
+}
+
+/* .slds-card{
+    margin:0.30rem;
+    background:linear-gradient(270deg,#9d3232,#461b1b );
+    color: white;
+    background-position:center;
+    background-size:cover;
+    border-radius:20px;
+    
+    
+  } */
+  /* .slds-progress-bar__value{
+    background: var(--lwc-progressBarColorBackgroundFill,rgb(179, 47, 42));
+  } */
+     
+  .progressBar{
+    background-color: rgb(255, 153, 0);
+  }

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Iterate Apex Maps in LWC" icon-name="custom:custom63">
+        <lightning-button label="Load Simple Map" slot="actions" onclick={handleLoadSimpleMap}></lightning-button>
+        <lightning-button label="Load List of Maps" slot="actions" onclick={handleLoadListMap}></lightning-button>
+        <lightning-button label="Load Map inside Map" slot="actions" onclick={handleNestedMap}></lightning-button>
+        <lightning-card if:true={showSimpleMapCard} title="Simple Map" icon-name="custom:custom63">
+            <lightning-layout pull-to-boundary="medium">
+                <lightning-layout-item flexibility="auto" padding="horizontal-medium">
+                    <template if:true={simpleMapStr}>
+                        <div class="scroller">
+                            <pre>{simpleMapStr}</pre>
+                        </div>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+    </lightning-card>
+</template>

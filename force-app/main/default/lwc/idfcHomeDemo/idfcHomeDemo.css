@@ -1,0 +1,70 @@
+.redbg{
+    background: linear-gradient(270deg,#9d3232,#461b1b);
+    color: white;
+    background-position: 20px;
+    text-align: center;
+}
+.align1{
+    text-align: center;
+}
+.align2{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    padding-bottom: 2%;
+}
+.align3{
+    text-align: center;
+    font-size: 75%;
+    font-weight: 500;
+    padding-right: 3.5%;
+}
+.align4{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+.align5{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+.align6{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+.align7{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+.align8{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+.hrank{
+    height: 46%;
+}
+.img{
+    width: 6%;
+}
+.ctrank{
+    margin-left: 2%;
+}
+hr.new1{
+    border-top: 1px solid orange;
+    margin: 2%;
+}
+.hr.new2{
+    border-top: 1px solid black;
+    margin: 6%;
+}
+.flexContainer {
+  flex-direction: column;  
+  display: flex;
+  justify-content: center;
+  
+  
+}

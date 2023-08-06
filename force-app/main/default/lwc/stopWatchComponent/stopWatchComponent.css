@@ -1,0 +1,10 @@
+.heading{
+font-weight: 700;
+font-size: 11;
+font-size: 2rem;
+color: blue;
+}
+.timer{
+    font-size: 30px;
+    padding:0 1rem; 
+}

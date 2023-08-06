@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Account Survey Form">
+        <lightning-record-edit-form object-api-name={accountObject} onsuccess={handleSuccess} onsubmit={handleSubmit}>
+            {accountObject}
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

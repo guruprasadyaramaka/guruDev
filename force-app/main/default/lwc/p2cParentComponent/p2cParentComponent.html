@@ -1,0 +1,19 @@
+<template>
+    <!--<c-p2c-alert-component
+    message="Test"
+    card-heading="Test"
+    ></c-p2c-alert-component>  -->   
+    
+    <c-p2c-carousel-component carousel-details={carouselData}></c-p2c-carousel-component>
+
+    <lightning-input type="number"  value={percentage} onchange={handlePercentage} label="Enter Percentage" >
+
+    </lightning-input>
+    <c-p2c-percentage-component
+    actual-persentage={percentage}
+    ></c-p2c-percentage-component>
+    <lightning-button variant="brand" label="Reset Slider"  onclick={handleRestSlider} 
+    ></lightning-button>
+    <c-p2c-slider-component></c-p2c-slider-component>
+    
+</template>

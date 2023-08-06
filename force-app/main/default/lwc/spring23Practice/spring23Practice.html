@@ -1,0 +1,37 @@
+<template>
+    <!--<lightning-quick-action-panel header="LWC Quick Action Techdicer">
+        <p>In it a screen flow is open like modal pop and ask users to fill and submit the information.</p>
+           <lightning-button variant="base" label={buttonLabel}  onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <div slot="footer">
+            <lightning-button variant="neutral"
+             label="Cancel" onclick={closeAction}>
+            </lightning-button>
+            <lightning-button variant="brand"
+             label="Save" onclick={closeAction} 
+             class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+    </lightning-quick-action-panel>-->
+    <lightning-card  title="Spring23">
+        <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" padding="around-small">
+                <div class="slds-p-around_medium slds-text-align_center">
+                     <lightning-button variant="brand" label={buttonLabel}  onclick={handleClick} class="slds-align_absolute-center"></lightning-button>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" padding="around-small">
+                 <template if:true={variable}>
+                    <div class="slds-p-around_medium slds-text-align_center">
+                        <p>Hi Welcome to the spring23 Practice !!. Wait of org to update the releases then we can good to go practice the things here.
+                            Please click in the Reduce button to close this window
+                        </p>
+                    </div>
+                 </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+       
+        
+    </lightning-card>
+</template>

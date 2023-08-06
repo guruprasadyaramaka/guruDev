@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    padding: 1rem;
+}
+
+.responsive-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+
+.cell-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}

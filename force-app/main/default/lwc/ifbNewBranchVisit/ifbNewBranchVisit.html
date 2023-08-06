@@ -1,0 +1,32 @@
+<template>
+  <c-ifb-way2-Excel-header></c-ifb-way2-Excel-header>
+  <lightning-tabset active-tab-value={activeTab}>
+    <lightning-tab label="Summary" value="1" onactive={handleActive}>
+      <template if:false={checkUserRole}>
+        <lightning-tabset>
+          <div class="slds-tabs_default" style="margin-top:-29px">
+            <div style="background-color: var(--lwc-brandHeader,rgb(255,255,255));color:white">
+              <p style="font-size: 30px;margin-left:10px; color:black">Way2Excel Dashboard</p>
+            </div>
+            <div class="slds-clearfix" style="margin-top: 10px;">
+              <div class="slds-float_left">
+                <b style="font-size: 20px;"> Here's Your Summary For {month}'{year}</b>
+              </div>
+              <div class="slds-float_right">
+                <a class="slds-button" href={chReportLink}>
+                  <p>View YTD Report</p>
+                </a>
+              </div>
+              <div class="slds-float_right" style="margin-right: 40px;color:black">
+                <span>
+                  <lightning-icon icon="utility:download" alternative-text="download" title="medium (default)"></lightning-icon>
+                </span>
+                <lightning-button variant="Base" label="Download Current Month Report" title="Download Current Month Report" onclick={exportContactData}></lightning-button>
+              </div>
+            </div>
+          </div>
+        </lightning-tabset>
+      </template>
+    </lightning-tab>
+  </lightning-tabset>
+</template>

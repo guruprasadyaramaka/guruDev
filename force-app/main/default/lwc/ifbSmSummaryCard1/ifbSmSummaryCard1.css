@@ -1,0 +1,11 @@
+.slds-card{
+	 margin:0.30rem;
+    background:linear-gradient(270deg,#9d3232,#461b1b );
+    color: white;
+    background-position:center;
+    background-size:cover;
+    border-radius:20px;
+}
+.progressBar{
+    background-color: rgb(255, 153, 0);
+  }

@@ -1,0 +1,19 @@
+<template>
+  <lightning-input
+    name="Name"
+    value={name}
+    onchange={handleChange}
+  ></lightning-input>
+  <lightning-input
+    name="Rating"
+    value={rating}
+    onchange={handleChange}
+  ></lightning-input>
+  <lightning-input
+    name="Industry"
+    value={industry}
+    onchange={handleChange}
+  ></lightning-input>
+
+  <lightning-button label="Create" onclick={handleClick}></lightning-button>
+</template>
