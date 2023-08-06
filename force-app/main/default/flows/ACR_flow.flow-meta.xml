@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>ACR flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ACR flow</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>ACR_record_create</name>
+        <label>ACR record create</label>
+        <locationX>448</locationX>
+        <locationY>77</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>vAccount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>vContact</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPrimary</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Role</field>
+            <value>
+                <stringValue>Business User</stringValue>
+            </value>
+        </inputAssignments>
+        <object>AccountContactRole</object>
+    </recordCreates>
+    <startElementReference>ACR_record_create</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>account</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>AccountID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>contact</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>vAccount</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>vContact</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>
