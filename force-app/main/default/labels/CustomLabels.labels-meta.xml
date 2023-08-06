@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>caseStatus</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>caseStatus</shortDescription>
+        <value>New,Working,Escalated,Closed</value>
+    </labels>
+    <labels>
+        <fullName>caseStatusQuery</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>caseStatusQuery</shortDescription>
+        <value>SELECT Id,Status,accountId from Case where status IN:caseStatus</value>
+    </labels>
+</CustomLabels>
